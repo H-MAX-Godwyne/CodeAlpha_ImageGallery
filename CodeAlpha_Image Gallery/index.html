@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Image Gallery</h1>
+        <p>Explore beautiful moments through photography.</p>
+    </header>
+
+    <nav class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="nature">Nature</button>
+        <button class="filter" data-filter="city">City</button>
+        <button class="filter" data-filter="animals">Animals</button>
+    </nav>
+    <br><br>
+
+    <main class="gallery">
+        <img data-category="nature"
+             src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600"
+             alt="Beautiful mountain lake">
+
+        <img data-category="city"
+             src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600"
+             alt="City skyline">
+
+        <img data-category="animals"
+             src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600"
+             alt="Golden dog">
+
+        <img data-category="nature"
+             src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600"
+             alt="Green forest">
+
+        <img data-category="city"
+             src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=600"
+             alt="Modern architecture">
+
+        <img data-category="animals"
+             src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=600"
+             alt="Cat">
+
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <button id="close" aria-label="Close image">&times;</button>
+        <button id="prev" aria-label="Previous image">&#10094;</button>
+        <img id="largeImage" src="" alt="Enlarged gallery image">
+        <button id="next" aria-label="Next image">&#10095;</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Godwin's Image Gallery. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
