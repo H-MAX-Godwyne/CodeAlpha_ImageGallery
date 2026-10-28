@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive photography gallery built with HTML, CSS and JavaScript.">
+  <title>Photo Gallery | My Photography</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">Photo<span>Gallery.</span></a>
+    <p>Capturing moments, one picture at a time.</p>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">MY COLLECTION</p>
+      <h1>Explore the Gallery</h1>
+      <p class="subtitle">
+        A collection of beautiful moments from nature, wildlife,
+        architecture and travel.
+      </p>
+    </section>
+
+    <nav class="filters" aria-label="Filter photographs">
+      <button class="filter-btn active" data-filter="all">All Photos</button>
+      <button class="filter-btn" data-filter="nature">Nature</button>
+      <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+      <button class="filter-btn" data-filter="architecture">Architecture</button>
+      <button class="filter-btn" data-filter="travel">Travel</button>
+    </nav>
+
+    <section class="gallery" id="gallery" aria-label="Photo gallery">
+
+      <article class="gallery-item" data-category="nature">
+        <button class="photo-button"
+          data-index="0" aria-label="View Mountain Escape">
+          <img
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85"
+            alt="Mountain peaks rising above the surrounding landscape"
+            loading="lazy">
+          <span class="photo-overlay">
+            <span class="photo-title">Mountain Escape</span>
+            <span class="photo-category">Nature</span>
+          </span>
+        </button>
+      </article>
+
+      <article class="gallery-item" data-category="wildlife">
+        <button class="photo-button"
+          data-index="1" aria-label="View Elephant in the Wild">
+          <img
+            src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=900&q=85"
+            alt="Elephant photographed in its natural environment"
+            loading="lazy">
+          <span class="photo-overlay">
+            <span class="photo-title">Elephant in the Wild</span>
+            <span class="photo-category">Wildlife</span>
+          </span>
+        </button>
+      </article>
+
+      <article class="gallery-item" data-category="architecture">
+        <button class="photo-button"
+          data-index="2" aria-label="View Modern Architecture">
+          <img
+            src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=85"
+            alt="Modern building with clean architectural lines"
+            loading="lazy">
+          <span class="photo-overlay">
+            <span class="photo-title">Modern Architecture</span>
+            <span class="photo-category">Architecture</span>
+          </span>
+        </button>
+      </article>
+
+      <article class="gallery-item" data-category="travel">
+        <button class="photo-button"
+          data-index="3" aria-label="View Coastal Escape">
+          <img
+            src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=85"
+            alt="Coastal scenery beside the ocean"
+            loading="lazy">
+          <span class="photo-overlay">
+            <span class="photo-title">Coastal Escape</span>
+            <span class="photo-category">Travel</span>
+          </span>
+        </button>
+      </article>
+
+      <article class="gallery-item" data-category="nature">
+        <button class="photo-button"
+          data-index="4" aria-label="View Forest Trail">
+          <img
+            src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=85"
+            alt="A path surrounded by green forest trees"
+            loading="lazy">
+          <span class="photo-overlay">
+            <span class="photo-title">Forest Trail</span>
+            <span class="photo-category">Nature</span>
+          </span>
+        </button>
+      </article>
+
+      <article class="gallery-item" data-category="travel">
+        <button class="photo-button"
+          data-index="5" aria-label="View City Streets">
+          <img
+            src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=85"
+            alt="City buildings and streets photographed from above"
+            loading="lazy">
+          <span class="photo-overlay">
+            <span class="photo-title">City Streets</span>
+            <span class="photo-category">Travel</span>
+          </span>
+        </button>
+      </article>
+
+    </section>
+
+    <p class="empty-message" id="emptyMessage" hidden>
+      No photos found in this category.
+    </p>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox"
+       role="dialog" aria-modal="true"
+       aria-label="Photo viewer" aria-hidden="true" hidden>
+
+    <button class="close-btn" id="closeBtn"
+      aria-label="Close photo viewer">&times;</button>
+
+    <button class="nav-btn prev-btn" id="prevBtn"
+      aria-label="Previous photo">&#10094;</button>
+
+    <figure class="lightbox-content">
+      <img id="lightboxImage" src="" alt="">
+      <figcaption>
+        <span id="lightboxTitle"></span>
+        <span id="photoCounter"></span>
+      </figcaption>
+    </figure>
+
+    <button class="nav-btn next-btn" id="nextBtn"
+      aria-label="Next photo">&#10095;</button>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> My Photo Gallery.
+      Built with Love by Godwin.</p>
+  </footer>
+
+</body>
+</html>
